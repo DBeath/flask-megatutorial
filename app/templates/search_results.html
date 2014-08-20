@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Search results for "{{query}}":</h1>
+{% for post in results %}
+  <table>
+    <tr valign="top">
+      {% include 'post.html' %}
+    </tr>
+  </table>
+{% endfor %}
+{% endblock %}
